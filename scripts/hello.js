@@ -1,4 +1,3 @@
-(function () {
 	'use strict';
 	module.exports = (robot) => {
 		robot.hear(/hello>/i, (msg) => {
@@ -20,4 +19,3 @@
 			msg.send(username + ' は ' + looot);
 		});
 	};
-})();
