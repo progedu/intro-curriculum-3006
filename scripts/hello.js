@@ -2,7 +2,7 @@
 module.exports = (robot) => {
 	robot.hear(/hello>/i, (msg) => {
 		const username = msg.message.user.name;
-		msg.send('Helli, ' + username);
+		msg.send('Hello, ' + username);
 	});
 	robot.hear(/lot>/i, (msg) => {
 		const username = msg.message.user.name;
