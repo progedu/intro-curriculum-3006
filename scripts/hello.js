@@ -3,7 +3,7 @@ module.exports = (robot) => {
 	robot.hear(/lot>/i, (msg) => {
 		const username = msg.message.user.name;
     const lots = ['大吉', '吉', '中吉', '末吉', '凶'];
-    const lot = Math.floor(Math.random() * lots.length);
-    msg.send(`${lots[lot]}, ${username}`);
+    const lot = lots[Math.floor(Math.random() * lots.length)];
+    msg.send(`${lot}, ${username}`);
 	});
 };
