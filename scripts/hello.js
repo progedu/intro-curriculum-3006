@@ -11,3 +11,4 @@ module.exports = (robot) => {
 		msg.send(msg.message.user.name + 'の運勢は：' + lot);
 	});
 };
+
