@@ -1,4 +1,4 @@
-'use strict';
+'use strict'; //2018/01/22、再トライ！
 module.exports = (robot) => {
 	robot.hear(/hello>/i, (msg) => {
 		const username = msg.message.user.name;
