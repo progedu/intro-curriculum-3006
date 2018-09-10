@@ -1,8 +1,8 @@
 'use strict';
 module.exports = (robot) => {
 	robot.hear(/hello>/i, (msg) => {
-		const userName = msg.message.user.name;
-		msg.send('Hello, ' + userName);
+		const username = msg.message.user.name;
+		msg.send('Hello, ' + username);
 	});
 
 	// 'lot>' と送ると運勢を返す
