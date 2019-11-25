@@ -8,6 +8,6 @@ module.exports = (robot) => {
         const user_id = msg.message.user.id;
         const lots = ['great fortune', 'fortune', 'middle fortune', 'future fortune', 'curse'];
         const lot = lots[Math.floor(Math.random() * lots.length)];
-        msg.send(`${lot}, <@${user_id}`);
+        msg.send(`${lot}, <@${user_id}>`);
     });
 };
