@@ -17,9 +17,17 @@
     "hubot-rules": "^0.1.1",
     "hubot-scripts": "^2.17.2",
     "hubot-shipit": "^0.2.0",
-    "hubot-slack": "^4.7.1"
+
+    "hubot-slack": "^4.0.5",
+    "snyk": "^1.230.5"
+
   },
   "engines": {
     "node": "0.10.x"
-  }
+  },
+  "scripts": {
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
+  },
+  "snyk": true
 }
