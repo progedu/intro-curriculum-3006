@@ -1,8 +1,8 @@
 'use strict';
 module.exports = (robot) => {
 	robot.hear(/おみくじ>/i, (msg) => {
-		const lots = ['daikiti', 'kiti', 'tyuukiti', 'suekiti', 'kyou'];
+		const lots = ['大吉', '吉', '中吉', '末吉', '凶'];
 		const lot = lots[Math.floor(Math.random() * lots.length)];
-		msg.send(`あなたの運勢は, lot`);
+		msg.send(`あなたの運勢は, ${lot}`);
 	});
 };
