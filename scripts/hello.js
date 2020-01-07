@@ -1,7 +1,8 @@
 'use strict';
 module.exports = (robot) => {
-	robot.hear(/hello>/i, (msg) => {
-		const username = msg.message.user.name;
-		msg.send('Hello, ' + username);
+	robot.hear(/おみくじ>/i, (msg) => {
+		const lots = ['daikiti', 'kiti', 'tyuukiti', 'suekiti', 'kyou'];
+		const lot = lots[Math.floor(Math.random() * lots.length)];
+		msg.send(`あなたの運勢は, lot`);
 	});
 };
