@@ -1,7 +1,12 @@
 'use strict';
+
+const lots = ['大吉', '吉', '中吉', '末吉', '凶'];
+
 module.exports = (robot) => {
-	robot.hear(/hello>/i, (msg) => {
+	robot.hear(/おみくじ/i, (msg) => {
 		const username = msg.message.user.name;
-		msg.send('Hello, ' + username);
+		const id = msg.message.user.id;
+		const lot = lots[Math.floor(Math.random() * lots.length)];
+		msg.send(`<@${id}> your lot is ` + lot);
 	});
 };
