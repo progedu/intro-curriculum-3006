@@ -1,7 +1,23 @@
-'use strict';
-module.exports = (robot) => {
-	robot.hear(/hello>/i, (msg) => {
-		const username = msg.message.user.name;
-		msg.send('Hello, ' + username);
-	});
+'use strict'
+//↓はexample.coffeeのcofeescriptをマネてjsで作ったものになる。
+//関数を外部に送る。無名関数を作ってすぐ、exportsに代入している。そうする事で他ﾌｧｲﾙから使えるのでﾗｲﾌﾞﾗﾘがhello.jsを読み込んでﾎﾞｯﾄを動かしてくれるという流れ。
+//関数の中で↓のrobotという物が多く機能を持ってる
+module.exports = (robot) => {　//(robot)：引数にとって、以下のような処理をします。
+    //hear:次の(以下)の発言があったら反応します。両ｻｲﾄﾞを//で囲うと正規表現なので文字列にする必要は無い。ただ文字列として書く方法もあるが、正規表現を勧められている。iｵﾌﾟｼｮﾝは大文字小文字区別しない。
+    robot.hear(/hello>/i, (msg) => {    //見つかったら、次はﾒｯｾｰｼﾞ情報。(msg)という引数に、その発言の情報が入って以下の関数を実行して。ｵﾌﾞｼﾞｪｸﾄ：ﾒｯｾｰｼﾞ情報を受け取った関数以下が実行される。
+        const user_id = msg.message.user.name;　//まずはuserIDを取得。ﾒｯｾｰｼﾞ情報の、ﾕｰｻﾞｰの中の、ID  とすればIDの情報が取れる
+        //console.log(msg);//①msgｵﾌﾞｼﾞｪｸﾄの中身を確認してみる
+        msg.send(`Hello, <@${user_id}>`);　//取得できたら、msg.send：ボットからの返事を送る内容を入れる。`ﾊﾞｯｸｸｫｰﾃｰｼｮﾝの方が＋で文字列連結しなくても良いから、変数の展開もしやすくおすすめ
+        //@ﾏｰｸつけた方が色が変わるからおすすめ
+        //bot がユーザーにメンションするには <@ユーザーID> という特殊な書き方をする必要があります。
+    });
+
+    robot.hear(/おみくじ/i, (msg) => {    
+        const user_id = msg.message.user.name;　
+        const lots = ['大吉', '吉', '中吉', '末吉', '凶'];
+        const lot = lots[Math.floor(Math.random() * lots.length)];
+        msg.send(`${lot}, <@${user_id}>`);　
+    });　
+        //  再度このスクリプトを読み込み、slackで作動させたい場合はもう一度 env ～ --adapter slack　のコマンドを入れること。
+        //  起動ができていたら、slackのｻｲﾄﾞﾊﾞｰのﾎﾞｯﾄ名の●がｸﾞﾘｰﾝになり、アクティブ状態ということになるので、変更が反映される。
 };
