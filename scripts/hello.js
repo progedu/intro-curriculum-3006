@@ -5,3 +5,4 @@ module.exports = (robot) => {
 		msg.send('Hello, ' + username);
 	});
 };
+
