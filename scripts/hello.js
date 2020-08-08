@@ -4,9 +4,7 @@ module.exports = (robot) => {
 		const username = msg.message.user.name;
 		msg.send(`Hello, @${username}`);
 	});
-};
 
-module.exports = (robot) => {
 	robot.hear(/おみくじ/i, (msg) => {
 		const username = msg.message.user.name;
 		const lots = ['大吉', '吉', '中吉', '末吉', '凶'];
