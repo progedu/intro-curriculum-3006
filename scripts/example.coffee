@@ -28,8 +28,8 @@ module.exports = (robot) ->
   # robot.respond /lulz/i, (res) ->
   #   res.send res.random lulz
   #
-  # robot.topic (res) ->
-  #   res.send "#{res.message.text}? That's a Paddlin'"
+ robot.topic (res) ->
+   res.send "#{res.message.text}? That's a Paddlin'"
   #
   #
   # enterReplies = ['Hi', 'Target Acquired', 'Firing', 'Hello friend.', 'Gotcha', 'I see you']
