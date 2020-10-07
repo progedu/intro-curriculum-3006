@@ -4,10 +4,10 @@ module.exports = (robot) => {
         const user_id = msg.message.user.id;
         msg.send(`Hello, <@${user_id}>`);
     });
-    robot.hear(/おみくじ>/i, (msg) => {
-        const lots = ['大吉','吉','中吉','末吉','凶'];
-        const lot = lots[Math.floor(Math.random() * lots.length)];
-        const user_id = msg.message.user.id;   
-        msg.send(`あなたの今日の運勢は、 ${lot}, <@${user_id}>`);
+    robot.hear(/おみくじ/i, (msg) => {
+        const user_id = msg.message.user_id;
+        const lots = ['大吉', '吉', '中吉', '末吉', '凶'];
+        const lot = lots[Math.floor(Math.random() * lots.length)];    
+        msg.send(`あなた <@${user_id}>の運勢は ${lot} です`);
     });
 };
