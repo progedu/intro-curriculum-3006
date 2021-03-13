@@ -10,6 +10,6 @@ module.exports = (robot) => {
 		msg.send(lot);
 	});
 	robot.hear(/ok google/i, (msg) => {
-		robot.send('はい、なんでしょ...ってちゃうわ！！！');
+		msg.send('はい、なんでしょ...ってちゃうわ！！！');
 	})
 };
