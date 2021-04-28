@@ -11,3 +11,4 @@ module.exports = robot => {
     msg.send(`${lot}, <@${user_id}>`);
   });
 };
+
