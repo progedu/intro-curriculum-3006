@@ -79,6 +79,7 @@ available hubot plugins on [npmjs.com](npmjs) or by using `npm search`:
     ...
 
 
+
 To use a package, check the package's documentation, but in general it is:
 
 1. Use `npm install --save` to add the package to `package.json` and install it
