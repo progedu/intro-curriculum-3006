@@ -1,0 +1,46 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.21.5
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  SNYK-JS-HTTPSPROXYAGENT-469131:
+    - hubot-slack > @slack/client > https-proxy-agent:
+        patched: '2019-10-04T05:42:57.152Z'
+  SNYK-JS-LODASH-567746:
+    - hubot-slack > lodash:
+        patched: '2021-09-01T22:28:00.113Z'
+    - snyk > lodash:
+        patched: '2021-09-01T22:28:00.113Z'
+    - hubot-slack > @slack/client > lodash:
+        patched: '2021-09-01T22:28:00.113Z'
+    - snyk > @snyk/dep-graph > lodash:
+        patched: '2021-09-01T22:28:00.113Z'
+    - snyk > inquirer > lodash:
+        patched: '2021-09-01T22:28:00.113Z'
+    - snyk > snyk-config > lodash:
+        patched: '2021-09-01T22:28:00.113Z'
+    - snyk > snyk-mvn-plugin > lodash:
+        patched: '2021-09-01T22:28:00.113Z'
+    - snyk > snyk-nodejs-lockfile-parser > lodash:
+        patched: '2021-09-01T22:28:00.113Z'
+    - snyk > snyk-nuget-plugin > lodash:
+        patched: '2021-09-01T22:28:00.113Z'
+    - snyk > @snyk/dep-graph > graphlib > lodash:
+        patched: '2021-09-01T22:28:00.113Z'
+    - snyk > snyk-go-plugin > graphlib > lodash:
+        patched: '2021-09-01T22:28:00.113Z'
+    - snyk > snyk-nodejs-lockfile-parser > graphlib > lodash:
+        patched: '2021-09-01T22:28:00.113Z'
+    - snyk > @snyk/snyk-cocoapods-plugin > @snyk/dep-graph > lodash:
+        patched: '2021-09-01T22:28:00.113Z'
+    - snyk > snyk-php-plugin > @snyk/composer-lockfile-parser > lodash:
+        patched: '2021-09-01T22:28:00.113Z'
+    - snyk > @snyk/snyk-cocoapods-plugin > @snyk/dep-graph > graphlib > lodash:
+        patched: '2021-09-01T22:28:00.113Z'
+    - snyk > @snyk/snyk-cocoapods-plugin > @snyk/cocoapods-lockfile-parser > @snyk/ruby-semver > lodash:
+        patched: '2021-09-01T22:28:00.113Z'
+    - snyk > @snyk/snyk-cocoapods-plugin > @snyk/cocoapods-lockfile-parser > @snyk/dep-graph > graphlib > lodash:
+        patched: '2021-09-01T22:28:00.113Z'
+  SNYK-JS-TREEKILL-536781:
+    - snyk > snyk-sbt-plugin > tree-kill:
+        patched: '2021-09-01T22:28:00.113Z'
